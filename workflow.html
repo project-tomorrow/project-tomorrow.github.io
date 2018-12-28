@@ -1,0 +1,326 @@
+<html>
+	<head>
+		<!-- I want to break free -->
+  <link type="text/css" rel="stylesheet" href="/style.css">
+  <link type="text/css" rel="stylesheet" media="handheld" href="/smallScreen.css">
+  <link type="text/css" rel="stylesheet" media="screen and (orientation: portrait)" href="/smallScreen.css" >
+  <meta http-equiv="Content-Type" content="text/html" charset="iso-8859-1"
+        name="keywords" content="Innovation, ingénieur, technologie, école"
+        name="description" content="ProTo est une association ayant pour but de but de promouvoir l’innovation, l’entrepreneuriat et l’interdisciplinarité dans les établissements d'enseignement supérieur. "/>
+  <meta property="og:site_name" content="ProTo" />
+  <meta property="og:title" content="ProTo - Project Tomorrow" />
+  <meta property="og:description" content="ProTo est une association ayant pour but de but de promouvoir l’innovation, l’entrepreneuriat et l’interdisciplinarité dans les établissements d'enseignement supérieur. " />
+  <meta property="og:url" content="http://project-tomorrow.fr" />
+  <!--meta property="og:image" content="http://http://project-tomorrow.fr/logo.png" /-->
+  <link href="https://fonts.googleapis.com/css?family=Stalemate|Open+Sans|Signika+Negative" rel="stylesheet"> <!-- TODO:use our own not google-->
+  <link rel="icon" type="image/png" href="/favicon.png" size="32x32">
+  <title>ProTo - Les Projets</title>
+
+	</head>
+<body>
+	
+<nav id="HorzTopNav">
+  <a href="/"><div id="home" class="nav-icon left
+      >">
+  </div></a>
+  <ul id="webSiteNav">
+    
+      <a href="/project">
+        <li id="greenNav" onclick="this.className='selected'"
+          
+              class="selected"
+            >
+          Les Projets
+        </li>
+      </a>
+    
+      <a href="/workshop">
+        <li id="orangeNav" onclick="this.className='selected'"
+            >
+          Les Ateliers
+        </li>
+      </a>
+    
+      <a href="/people">
+        <li id="blueNav" onclick="this.className='selected'"
+            >
+          L'Association
+        </li>
+      </a>
+    
+      <a href="/contact">
+        <li id="redNav" onclick="this.className='selected'"
+            >
+          Contact
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+
+<nav id="Menu" class="right nav-icon">
+  <div id="MenuContainer">
+    <div id="PrivateMenu" class="subMenu">
+      <div id="PrivateLabel"><p class=vertical-text>Accès réservé</p></div>
+      <ul>
+      <li><a target="_blank" href="http://git.project-tomorrow.fr">
+              <div class= "nav-icon" id="gitlab"></div>
+              <span>Gitlab</span>
+      </a></li>
+      <li><a target="_blank" href="https://project-tomorrow.slack.com">
+              <div class= "nav-icon" id="slack"></div>
+              <span>Slack</span>
+      </a></li>
+      <li><a target="_blank" href="https://trello.com/protouser">
+              <div class= "nav-icon" id="trello"></div>
+              <span>Trello</span>
+      </a></li>
+      <li><a target="_blank" href="https://projecttomorrow.sharepoint.com/Team1">
+              <div class= "nav-icon" id="sharepoint"></div>
+              <span>Site du Projet</span>
+      </a></li>
+      <li><a target="_blank" href="https://www.office.com/1/?auth=2">
+              <div class= "nav-icon" id="office"></div>
+              <span>Portail Office</span>
+      </a></li>
+    </ul>
+  </div>
+  <div id="PublicMenu" class="subMenu">
+    <div id="PublicLabel"><p class=vertical-text>Accès public</p></div>
+      <ul>
+        <li><a target="_blank" href="/people">
+          <div class= "nav-icon" id="Team"></div>
+          <span>Équipe</span>
+        </a></li>
+        <li><a target="_blank" href="/contact">
+          <div class= "nav-icon" id="Mail"></div>
+          <span>Contact</span>
+        </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+	<section>
+    <div id="scroll-bar-diapo">
+      <!--div id="angle-bar-diapo"></div>-->
+      <!--div id="nav-bar-diapo"-->
+        <a  class="round selected" onclick="GoToSlide(0)">
+          <img src="/diapo-nav/sel-1.png"></img>
+        </a>
+        
+         <a  class="round" onclick="GoToSlide(1)">
+           <img src="/diapo-nav/2.png"></img>
+         </a>
+        
+         <a  class="round" onclick="GoToSlide(2)">
+           <img src="/diapo-nav/3.png"></img>
+         </a>
+        
+         <a  class="round" onclick="GoToSlide(3)">
+           <img src="/diapo-nav/4.png"></img>
+         </a>
+        
+         <a  class="round" onclick="GoToSlide(4)">
+           <img src="/diapo-nav/5.png"></img>
+         </a>
+        
+         <a  class="round" onclick="GoToSlide(5)">
+           <img src="/diapo-nav/6.png"></img>
+         </a>
+        
+         <a  class="round" onclick="GoToSlide(6)">
+           <img src="/diapo-nav/7.png"></img>
+         </a>
+        
+      <!--/div>-->
+    </div>
+
+    <div id="diaporama" onscroll="detectFocused()"><!--onmouseover="SlideStop()"
+                                         onfocussout="SlideStart()">-->
+    
+      <div id="diapo0" class="diapo">
+        <div class="diapo-logo">
+  <img src="/problem.png"></img>
+</div>
+<div class="diapo-text">
+  <h1>Phase préliminaire : définition d'une problématique de travail</h1>
+  <p>
+    <b>ProTo</b> forme les étudiants aux concepts de management de l’innovation, à ce titre, quoi de mieux que de commencer par la détermination d’un besoin
+    et de la réponse adéquate à lui apporter ? Ainsi, avant le début officiel des projets, les membres de <b>ProTo</b> se mettent en quête de prospects potentiels,
+    de problématiques prometteuses et invitent les étudiants participant au projet à faire de même. Le but n'est pas d'apporter un cahier des charges complet
+    aux étudiants mais de les pousser à identifier les réponses techniques possibles pour chaque problématique.
+  </p>
+  <ul>
+    <li> En quoi celles-ci apportent-elles une amélioration par rapport à l'existant ?</li>
+    <li> Sont-elles envisageables d'un point de vue technique dans le temps imparti ?</li>
+    <li> Pour quelles raisons un client potentiel optera pour la solution qui sera présentée plutôt que pour celle proposée par la concurrence ?</li>
+  </ul>
+  <p>
+    Cette phase se termine lors de l’arrêt du choix de la problématique pour le projet avant d'entrer dans une phase de réflexion approfondie
+    autour des actions à mener.
+  </p>
+</div>
+
+      </div>
+    
+      <div id="diapo1" class="diapo">
+        <div class="diapo-logo">
+  <img src="/brainStorm-small.png"></img>
+</div>
+<div class="diapo-text">
+  <h1>Phase 1 : réflexion</h1>
+  <p>Une fois la liste des problématiques définie et l’équipe de travail constituée, la problématique la plus
+   prometteuse est sélectionnée afin de bâtir une solution technique répondant aux besoins. L'équipe a également à charge de
+   construire une ébauche de plan marketing adapté à sa solution : définition de la cible, première étude du marché, facteurs clés de succès, etc.
+   </p>
+</div>
+
+      </div>
+    
+      <div id="diapo2" class="diapo">
+        <div class="diapo-logo">
+  <img src="/happy.png"></img>
+</div>
+<div class="diapo-text">
+  <h1>Phase 2 : validation</h1>
+  <p>Qu'il soit académique ou industriel, tout projet est soumis à des risques,
+  problème de développement, erreur d'appréciation des difficultées, mauvaise
+  compréhension du projet. C'est pour cette raison que les étudiants, avant
+  d’entamer toute phase de développement intensif, valident leur solution tant
+  du point de vue technique que fonctionnel.
+  </p><p>
+  Cette validation se fait à la fois par les écoles impliquées, les membres
+  de ProTo et, le cas échéant, par l'entreprise supportant le projet. Chacun ayant
+  une vision propre du projet, nous avons la conviction qu'une approche
+  pluripartite permet de prémunir le plus efficacement possible les risques
+  inhérents aux projets innovants et garantir notre succès.
+  </p>
+</div>
+
+      </div>
+    
+      <div id="diapo3" class="diapo">
+        <div class="diapo-logo">
+  <img src="/presentation.png"></img>
+</div>
+<div class="diapo-text">
+  <h1>Phase 3 : planification</h1>
+  <p>Après validation des solutions proposées, il est demandé aux étudiants de fournir des livrables intermédiaires détaillant un planning
+     des réalisations techniques, un dossier technique complet et un résumé des contenus du projet (but, public cible, diverses parties prenantes et leurs interactions, enjeux, etc.).
+     Le but de ce rendu est de s’assurer que les étudiants ont pris pleine mesure des implications du projet mais également de fournir
+     une matière à l'évaluation du projet au premier semestre (comme cela est demandé dans le cadre du projet 2016-2017 au sein de l'ENSEA). Tout ou parties de ces livrables
+	 pourront aussi servir aux étudiants pour présenter leur projet lors des phases de recherche de prospects pouvant soutenir le projet.
+   </p>
+</div>
+
+      </div>
+    
+      <div id="diapo4" class="diapo">
+        <div class="diapo-logo">
+  <img src="/burn_down.png"></img>
+</div>
+<div class="diapo-text">
+  <h1>Phase 4 : prototypage</h1>
+  <p>La phase de développement technique commence par l’élaboration d’une
+    preuve de concept comportant les fonctionnalités minimums exigibles par le
+    client. Le but de cette phase est de construire rapidement une base du produit
+    sur laquelle les étudiants pourront capitaliser lors d’un développement incrémental
+    avec un éventuel prospect, mais également de réaliser un démonstrateur si
+    ce dernier n’a toujours pas été trouvé.
+   </p>
+</div>
+
+      </div>
+    
+      <div id="diapo5" class="diapo">
+        <div class="diapo-logo">
+  <img src="/presentation.png"></img>
+</div>
+<div class="diapo-text">
+  <h1>Phase 5 : développement incrémental</h1>
+  <p>À partir du moment où le prototype/démonstrateur pour la solution est réalisé, les étudiants sont invités à
+    entamer des cycles courts de développement de fonctionnalités avec des retours
+    fréquents du client. En pratique, il s’agit d’une méthode de gestion de projets
+    AGILE. Le but de cette démarche est d'ajouter progressivement les fonctionnalités manquantes
+	du cahier des charges défini en début de projet tout en sécurisant celles qui ont déjà été mises en place jusque-là.
+   </p>
+</div>
+
+      </div>
+    
+      <div id="diapo6" class="diapo">
+        <div class="diapo-logo">
+  <img src="/finalProd.png"></img>
+</div>
+<div class="diapo-text">
+  <h1>Phase finale : livraison</h1>
+  <p>
+    Lors de la dernière phase du projet, le produit est livré dans sa forme fonctionnelle la plus avancée.
+    Selon la nature du produit, s'il s'agit d'un objet matériel on fournira les dossiers de fabrications, BOM, et schémas électroniques. 
+    S'il s'agit d'un produit immatériel, on fournira les applicatifs, codes sources et documentation de travail.
+    Ceci permettra au client de d'effectuer de futures phases de développement sur le produit indépendament des autres parties prenantes du projet.
+    On pourra aussi envisager, dans le cas où une partie des fonctionnalités avancées est encore en cours de
+    développement par l'équipe, la possibilité de poursuivre le développement ou la mise en place du produit au travers de stages 
+    ou de contrats co-signés avec l'une des Junior-Entreprises des établissements universitaires auxquels sont rattachés les élèves.
+   </p>
+</div>
+
+      </div>
+    
+    </div>
+  </section>
+	<footer>
+  <div id="legal">
+    <p>Copyright (c) 2016-2018 Copyright ProTo All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+<script type="text/javascript" language="JavaScript">
+
+  function GoToSlide(num){
+//    diaporama.scrollTo(0,Sladelist[num].offsetTop);
+    var startY = window.pageYOffset;
+    var stopY = Sladelist[num].offsetTop;
+    var distance = stopY > startY ? stopY - startY : startY - stopY;
+    if (distance < 50) {
+          scrollTo(0, stopY); return;
+    }
+    var speed = Math.round(distance / 100);
+    if  (speed >= 30) speed = 30;
+    var step = Math.round(distance / 40);
+    var leapY = stopY > startY ? startY + step : startY - step;
+    var timer = 0;
+    if (stopY > startY) {
+        for ( var i=startY; i<stopY; i+=step ) {
+            setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+            leapY += step; if (leapY > stopY) leapY = stopY; timer++;
+        } return;
+    }
+    for ( var i=startY; i>stopY; i-=step ) {
+        setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+        leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+    }
+  }
+
+  function detectFocused(){
+    var i=0;
+    for (;(Sladelist[i].offsetTop+Sladelist[i].offsetHeight) < (window.pageYOffset+150);) i++;
+    Buttonlist[SladeNumber].className = "round";
+    Buttonlist[i].classList.add("selected");
+    Buttonlist[SladeNumber].children[0].src = "/diapo-nav/" + (SladeNumber+1) + ".png";
+    Buttonlist[i].children[0].src = "/diapo-nav/sel-" + (i+1) + ".png";
+    SladeNumber=i;
+  }
+
+  var Sladelist = document.getElementsByClassName("diapo");
+  var Buttonlist = document.getElementById("scroll-bar-diapo").getElementsByClassName("round");
+  window.addEventListener("scroll",detectFocused);
+  var i = 0;
+  var SladeNumber=0;
+</script>
+
+</html>
+

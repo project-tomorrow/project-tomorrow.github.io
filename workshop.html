@@ -1,4 +1,3 @@
-ss
 <html>
 	<head>
 		<!-- I want to break free -->
@@ -15,7 +14,7 @@ ss
   <!--meta property="og:image" content="http://http://project-tomorrow.fr/logo.png" /-->
   <link href="https://fonts.googleapis.com/css?family=Stalemate|Open+Sans|Signika+Negative" rel="stylesheet"> <!-- TODO:use our own not google-->
   <link rel="icon" type="image/png" href="/favicon.png" size="32x32">
-  <title>ProTo - Les Projets</title>
+  <title>ProTo - Les Ateliers</title>
 
 	</head>
 <body>
@@ -28,8 +27,6 @@ ss
     
       <a href="/project">
         <li id="greenNav" onclick="this.className='selected'"
-          
-              class="selected"
             >
           Les Projets
         </li>
@@ -37,6 +34,8 @@ ss
     
       <a href="/workshop">
         <li id="orangeNav" onclick="this.className='selected'"
+          
+              class="selected"
             >
           Les Ateliers
         </li>
@@ -103,32 +102,43 @@ ss
   </div>
 </nav>
 
-
-	<div class="slide-content">
+  <div class="slide-content">
     <div class=" central-text">
-    	<h1> Les Projets</h1>
-    	<p>
-        Grâce à leur encadrement par des professionnels travaillant en entreprise
-        (ingénieurs, chefs de projet, entrepreneurs, etc.), les projets ProTo
-        incarnent un bon moyen pour les étudiants de se sensibiliser aux
-        problématiques réelles et concrètes de leur futur emploi. En plus d'offrir
-        aux étudiants <b>une expérience pratique de la gestion de l'innovation</b>, 
-        les projets étant réalisés dans le cadre de partenariat inter-écoles, ProTo
-        leur permet d'expérimenter <b>le travail en équipe pluridisciplinaires</b>.
-        Basés sur des problématiques concrètes soumises par des partenaires industriels,
-        les projets ProTo sont également une excellente façon pour les entreprises
-        de <b>développer des solutions innovantes et détecter de futurs collaborateurs.</b>
+  		<h1>Les ateliers entrepreneuriaux</h1>
+  		<p>
+        Les <b>ateliers</b> sont des rencontres thématiques liées à l'innovation
+        et l'entreprenariat avec la présence d'intervenants professionnels du sujet.
+        Ces ateliers sont une occasion pour les invités (étudiants et professionnels)
+        de parfaire leurs connaissances théoriques et pratiques mais également de
+        rencontrer d'autres entrepreneurs, acteurs du milieu de l'innovation ou de
+        nouveaux partenaires d'affaire.
+      </p>
+      <p>
+        Le principe est simple : chaque thématique est abordée en 2 sessions.
+        La première ouverte à tous permet une transmission de savoir de l’intervenant
+        vers les participants. La seconde incite les participants à appliquer leurs
+        nouveaux acquis sur leurs propres projets entrepreneuriaux.
       </p>
     </div>
-    <div class="BigButt"><a href="/workflow">
-      <h1>Le Workflow</h1>
-      <p>Notre méthodologie de fonctionnement.</p>
-      <img src="/workflow.png"/></a>
-    </div>
-    <div class="BigButt"><a href="/hifive">
-      <h1>Les Projets</h1>
-      <p>Présentation des projets ProTo.</p>
-      <img src="/ProToLogo.png"/></a>
+    <div class="kindOfTab">
+      <div class="column">
+        <h1>Session 1</h1>
+        <p> Elle fournit une analyse du thème en question sous la forme d'un partage
+          d'expérience et/ou de connaissance des intervenants. </p><p>Si le format de cette
+          session est laissé au choix du ou des animateurs, la formule par défaut
+          est celle d’une conférence ouverte à tous.
+        </p>
+        <img src="/session1.png"/></a>
+      </div>
+      <div class="column">
+        <h1>Session 2</h1>
+        <p> C'est l'occasion pour les participants porteurs de projet de mettre en
+          pratique les connaissances acquises lors du premier atelier. Elle se
+          déroule en comité restreint (20 personnes maximum) et sous la forme d’un
+          échange entre les différents participants et les intervenants
+        </p>
+        <img src="/session2.png"/></a>
+      </div>
     </div>
   </div>
 	<footer>
@@ -140,28 +150,46 @@ ss
 </body>
 <script type="text/javascript" language="JavaScript">
 
-  function fadeIn(el){
-    el.className = "fade-In";
-    window.setTimeout(fadeOut,2000,el);
+  function GoToSlide(num){
+//    diaporama.scrollTo(0,Sladelist[num].offsetTop);
+    var startY = window.pageYOffset;
+    var stopY = Sladelist[num].offsetTop;
+    var distance = stopY > startY ? stopY - startY : startY - stopY;
+    if (distance < 50) {
+          scrollTo(0, stopY); return;
+    }
+    var speed = Math.round(distance / 100);
+    if  (speed >= 30) speed = 30;
+    var step = Math.round(distance / 40);
+    var leapY = stopY > startY ? startY + step : startY - step;
+    var timer = 0;
+    if (stopY > startY) {
+        for ( var i=startY; i<stopY; i+=step ) {
+            setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+            leapY += step; if (leapY > stopY) leapY = stopY; timer++;
+        } return;
+    }
+    for ( var i=startY; i>stopY; i-=step ) {
+        setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+        leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+    }
   }
 
-  function fadeOut(el){
-    el.className = "fade-Out";
-    window.setTimeout(fadeNon,1000,el);
+  function detectFocused(){
+    var i=0;
+    for (;(Sladelist[i].offsetTop+Sladelist[i].offsetHeight) < (window.pageYOffset+150);) i++;
+    Buttonlist[SladeNumber].className = "round";
+    Buttonlist[i].classList.add("selected");
+    Buttonlist[SladeNumber].children[0].src = "/diapo-nav/" + (SladeNumber+1) + ".png";
+    Buttonlist[i].children[0].src = "/diapo-nav/sel-" + (i+1) + ".png";
+    SladeNumber=i;
   }
 
-  function fadeNon(el){
-    el.className  = "fade-el";
-    fadeTab(el);
-  }
-
-  function fadeTab(){
-    inc = (inc+1)%(fadelist.length);
-    fadeIn(fadelist[inc]);
-  }
-
-  var fadelist = document.getElementsByClassName("fade-el");
-  var inc = 0;
+  var Sladelist = document.getElementsByClassName("diapo");
+  var Buttonlist = document.getElementById("scroll-bar-diapo").getElementsByClassName("round");
+  window.addEventListener("scroll",detectFocused);
+  var i = 0;
+  var SladeNumber=0;
 </script>
 
 </html>

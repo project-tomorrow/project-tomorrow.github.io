@@ -1,4 +1,3 @@
-ss
 <html>
 	<head>
 		<!-- I want to break free -->
@@ -15,7 +14,7 @@ ss
   <!--meta property="og:image" content="http://http://project-tomorrow.fr/logo.png" /-->
   <link href="https://fonts.googleapis.com/css?family=Stalemate|Open+Sans|Signika+Negative" rel="stylesheet"> <!-- TODO:use our own not google-->
   <link rel="icon" type="image/png" href="/favicon.png" size="32x32">
-  <title>ProTo - Les Projets</title>
+  <title>ProTo - Contact</title>
 
 	</head>
 <body>
@@ -28,8 +27,6 @@ ss
     
       <a href="/project">
         <li id="greenNav" onclick="this.className='selected'"
-          
-              class="selected"
             >
           Les Projets
         </li>
@@ -51,6 +48,8 @@ ss
     
       <a href="/contact">
         <li id="redNav" onclick="this.className='selected'"
+          
+              class="selected"
             >
           Contact
         </li>
@@ -103,34 +102,32 @@ ss
   </div>
 </nav>
 
-
-	<div class="slide-content">
-    <div class=" central-text">
-    	<h1> Les Projets</h1>
-    	<p>
-        Grâce à leur encadrement par des professionnels travaillant en entreprise
-        (ingénieurs, chefs de projet, entrepreneurs, etc.), les projets ProTo
-        incarnent un bon moyen pour les étudiants de se sensibiliser aux
-        problématiques réelles et concrètes de leur futur emploi. En plus d'offrir
-        aux étudiants <b>une expérience pratique de la gestion de l'innovation</b>, 
-        les projets étant réalisés dans le cadre de partenariat inter-écoles, ProTo
-        leur permet d'expérimenter <b>le travail en équipe pluridisciplinaires</b>.
-        Basés sur des problématiques concrètes soumises par des partenaires industriels,
-        les projets ProTo sont également une excellente façon pour les entreprises
-        de <b>développer des solutions innovantes et détecter de futurs collaborateurs.</b>
-      </p>
-    </div>
-    <div class="BigButt"><a href="/workflow">
-      <h1>Le Workflow</h1>
-      <p>Notre méthodologie de fonctionnement.</p>
-      <img src="/workflow.png"/></a>
-    </div>
-    <div class="BigButt"><a href="/hifive">
-      <h1>Les Projets</h1>
-      <p>Présentation des projets ProTo.</p>
-      <img src="/ProToLogo.png"/></a>
-    </div>
-  </div>
+	<section>
+		<div class="slide-content">
+			<div class="central-text small">
+      	<h1>Parlez-nous !</h1>
+				<p>
+					ProTo recherche des entreprises et des écoles partenaires pour enrichir et développer les projets d'innovation. Contactez-nous si vous souhaitez nous rejoindre !
+				</p><p>
+					De même, si vous souhaitez rejoindre l'association, faire un don ou simplement en savoir plus sur ProTo, n'hésitez pas à nous le signaler en complétant le formulaire ci-dessous. Nous serons ravis de vous répondre.
+        </p>
+      </div>
+			<form name="contactForm" id="contactForm" action="/contact/send" method="post" onsubmit="return (validateForm())"/>
+				<fieldset>
+					<legend> A propos de vous </legend>
+		      <input class="small" type="text" name="firstName" placeholder="Prénom" value="" maxlength="40" onblur="checkVoid(this)"required/>
+		      <input class="small" type="text" name="lastName" placeholder="Nom" value="" maxlength="40" onblur="checkVoid(this)"required/>
+		      <input type="email" name="mail" value="" placeholder="Votre e-mail" onblur="checkMail()" required/>
+		    </fieldset>
+				<fieldset>
+					<legend> Votre message </legend>
+	        <input type="text" name="object" value="" maxlength="50" placeholder="Objet du Message" onblur="checkVoid(this)" required/>
+	        <textarea class="large" name="message" rows="8" cols="144" placeholder="Dites-nous tout !" maxlength="500" onblur="checkVoid(this)" required></textarea>
+				</fieldset>
+	      <input id="buttonMail" type="submit" name="send"></button>
+		  </form>
+		</div>
+	</section>
 	<footer>
   <div id="legal">
     <p>Copyright (c) 2016-2018 Copyright ProTo All Rights Reserved.</p>
@@ -139,29 +136,27 @@ ss
 
 </body>
 <script type="text/javascript" language="JavaScript">
-
-  function fadeIn(el){
-    el.className = "fade-In";
-    window.setTimeout(fadeOut,2000,el);
+function checkVoid(el) {
+  if(el.value==""){
+    el.classList.add('false');
+  } else {
+    el.classList.add('true');
   }
+}
 
-  function fadeOut(el){
-    el.className = "fade-Out";
-    window.setTimeout(fadeNon,1000,el);
+function checkMail() {
+  var mail = document.contactForm.mail.value;
+  var regMail = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
+
+  if (!regMail.test(mail)) {
+    document.contactForm.mail.classList.add('false');
+    return false;
   }
-
-  function fadeNon(el){
-    el.className  = "fade-el";
-    fadeTab(el);
+  else {
+    document.contactForm.mail.classList.add('true');
+    return true;
   }
-
-  function fadeTab(){
-    inc = (inc+1)%(fadelist.length);
-    fadeIn(fadelist[inc]);
-  }
-
-  var fadelist = document.getElementsByClassName("fade-el");
-  var inc = 0;
+}
 </script>
 
 </html>

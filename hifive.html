@@ -1,4 +1,3 @@
-ss
 <html>
 	<head>
 		<!-- I want to break free -->
@@ -103,34 +102,82 @@ ss
   </div>
 </nav>
 
-
-	<div class="slide-content">
-    <div class=" central-text">
-    	<h1> Les Projets</h1>
-    	<p>
-        Grâce à leur encadrement par des professionnels travaillant en entreprise
-        (ingénieurs, chefs de projet, entrepreneurs, etc.), les projets ProTo
-        incarnent un bon moyen pour les étudiants de se sensibiliser aux
-        problématiques réelles et concrètes de leur futur emploi. En plus d'offrir
-        aux étudiants <b>une expérience pratique de la gestion de l'innovation</b>, 
-        les projets étant réalisés dans le cadre de partenariat inter-écoles, ProTo
-        leur permet d'expérimenter <b>le travail en équipe pluridisciplinaires</b>.
-        Basés sur des problématiques concrètes soumises par des partenaires industriels,
-        les projets ProTo sont également une excellente façon pour les entreprises
-        de <b>développer des solutions innovantes et détecter de futurs collaborateurs.</b>
-      </p>
-    </div>
-    <div class="BigButt"><a href="/workflow">
-      <h1>Le Workflow</h1>
-      <p>Notre méthodologie de fonctionnement.</p>
-      <img src="/workflow.png"/></a>
-    </div>
-    <div class="BigButt"><a href="/hifive">
-      <h1>Les Projets</h1>
-      <p>Présentation des projets ProTo.</p>
-      <img src="/ProToLogo.png"/></a>
-    </div>
+	
+		
+		
+		<!--div class="projectNavItem "
+					 onclick="bisou(,this)"><a></a></div-->
+		
+		
+	<section id="ProjectPage">
+			
+				<div class="projectSlide" style="left:0%">
+					<div class="mainWindows">
+  <h1>Le Hi-five : Ampli Modulaire</h1>
+  <img src="modularAmp.png" style="max-width:1200px"></img>
+</div>
+<div class="bottomWindow">
+  <div class="central-text">
+    <p>
+    	Le premier des projets ProTo à être entré dans une phase active est réalisé au sein de L'<b>É</b>cole <b>N</b>ationale <b>S</b>upérieure de
+    	l'<b>É</b>lectronique et de ses <b>A</b>pplications - <a href="http://www.ensea.fr">ENSEA</a>. Ce dernier a pour nom <b>Hi-Five</b>. Ce projet de
+      développement de produit innovant est réalisé dans le cadre de la seconde année de l’ENSEA.
+    </p><p>
+      L'équipe formée de six étudiants co-encadrée par des professeurs de l’ENSEA et des membres de ProTo travaille sur un ampli hi-fi modulaire et portatif.
+    </p><p>
+      L’objectif est d’apporter une solution aux problèmes de customisation de masse et de durabilité des produits disponibles sur le marché des enceintes portatives.
+    </p><p>
+      L'idée est de construire un système possédant plusieurs modules physique assurant chacun des fonctionnalités propres et pouvant être combinés/recombinés à souhait.
+      Étant donné la limitation de temps imposée au projet, le choix a été fait de se concentrer sur la partie portable du système et les fonctionnalités les plus primitives ;
+      le design et le développement du produit gardent cependant à l’esprit la possibilité d’inclure un nombre conséquent de modules divers.
+    </p><p>
+      Les modules se connectent les uns aux autres via une connectique uniforme, supprimant ainsi les contraintes concernant l’ordre des modules ou leur nombre.
+      L’objectif de l’équipe est d’amener le développement du Hi-Five au point de recevoir un signal qui transporte l’information sonore (via Bluetooth ou une prise Jack),
+      lui appliquer une gamme de quelques filtres ou effets et le ressortir via les haut-parleurs disponibles sur l’un des modules.
+    </p><p>
+      Les Core Modules sont le module de contrôle, le module de batterie et le module d’amplifications. Ils sont essentiels au bon fonctionnement de l’appareil.
+      Comme les autres modules, il est prévu d’en proposer plusieurs versions. Chacune proposant son avantage (moins de consommation, meilleures performances, prix moins élevé, etc.).
+    </p>
+  <!--p>
+	L'équipe actuelle est constituée de 6 élèves-ingénieurs pour lesquels nous assurons l'encadrement technique et l'appui pour les aspects de développement
+	marketing. La recherche de prospects éventuels pour soutenir ce projet est en cours. Dans le cadre de ce projet, le livrable intermédiaire permettra
+	aux professeurs d'évaluer les élèves sur le projet pour le premier semestre et le rendu final constituera leur note pour le second semestre.
+  </p-->
   </div>
+</div>
+
+				</div>
+			
+				<div class="projectSlide" style="left:100%">
+					<div class="mainWindows">
+    <img src="EnseaOutside.jpg"></img>
+</div>
+<div class="bottomWindow">
+    <p>
+    L'équipe actuelle est constituée de 6 élèves-ingénieurs de deuxième année pour lesquels nous assurons l'encadrement technique et l'appui pour
+    les aspects de développement marketing. <!-- La recherche de prospects éventuels pour soutenir ce projet est en cours. -->
+    Dans le cadre de ce projet,     le livrable intermédiaire permettra aux professeurs d'évaluer les élèves sur le projet pour
+    le premier semestre et le rendu final constituera leur note pour le second semestre.
+    </p>
+</div>
+
+				</div>
+			
+				<div class="projectSlide" style="left:200%">
+					
+<div class="mainWindows">
+    <img src="ENSEA_troll.png"></img>
+</div>
+<div class="bottomWindow">
+    <h1>1 23 54</h1>
+    <p>
+        La recherche de prospects éventuels pour soutenir ce projet est en cours.
+    </p>
+</div>
+
+				</div>
+			
+	</section>
 	<footer>
   <div id="legal">
     <p>Copyright (c) 2016-2018 Copyright ProTo All Rights Reserved.</p>
@@ -138,6 +185,15 @@ ss
 </footer>
 
 </body>
+<script>
+var old = document.getElementsByClassName("projectNavItem")[0];
+var bisou = function(num,el){
+	document.getElementById('ProjectPage').scrollLeft=num*document.getElementById('ProjectPage').clientWidth;
+	old.classList.remove("selected");
+	old = el;
+	el.classList.add("selected");
+}
+</script>
 <script type="text/javascript" language="JavaScript">
 
   function fadeIn(el){

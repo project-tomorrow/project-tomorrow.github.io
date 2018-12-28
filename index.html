@@ -1,1 +1,170 @@
-<h1>Hello</h1>
+<html>
+	<head>
+		<!-- I want to break free -->
+  <link type="text/css" rel="stylesheet" href="/style.css">
+  <link type="text/css" rel="stylesheet" media="handheld" href="/smallScreen.css">
+  <link type="text/css" rel="stylesheet" media="screen and (orientation: portrait)" href="/smallScreen.css" >
+  <meta http-equiv="Content-Type" content="text/html" charset="iso-8859-1"
+        name="keywords" content="Innovation, ingénieur, technologie, école"
+        name="description" content="ProTo est une association ayant pour but de but de promouvoir l’innovation, l’entrepreneuriat et l’interdisciplinarité dans les établissements d'enseignement supérieur. "/>
+  <meta property="og:site_name" content="ProTo" />
+  <meta property="og:title" content="ProTo - Project Tomorrow" />
+  <meta property="og:description" content="ProTo est une association ayant pour but de but de promouvoir l’innovation, l’entrepreneuriat et l’interdisciplinarité dans les établissements d'enseignement supérieur. " />
+  <meta property="og:url" content="http://project-tomorrow.fr" />
+  <!--meta property="og:image" content="http://http://project-tomorrow.fr/logo.png" /-->
+  <link href="https://fonts.googleapis.com/css?family=Stalemate|Open+Sans|Signika+Negative" rel="stylesheet"> <!-- TODO:use our own not google-->
+  <link rel="icon" type="image/png" href="/favicon.png" size="32x32">
+  <title>ProTo - Home</title>
+
+	</head>
+<body  onscroll="backpo()">
+	
+<nav id="HorzTopNav">
+  <a href="/"><div id="home" class="nav-icon left
+    
+       selected
+      >">
+  </div></a>
+  <ul id="webSiteNav">
+    
+      <a href="/project">
+        <li id="greenNav" onclick="this.className='selected'"
+            >
+          Les Projets
+        </li>
+      </a>
+    
+      <a href="/workshop">
+        <li id="orangeNav" onclick="this.className='selected'"
+            >
+          Les Ateliers
+        </li>
+      </a>
+    
+      <a href="/people">
+        <li id="blueNav" onclick="this.className='selected'"
+            >
+          L'Association
+        </li>
+      </a>
+    
+      <a href="/contact">
+        <li id="redNav" onclick="this.className='selected'"
+            >
+          Contact
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+
+<nav id="Menu" class="right nav-icon">
+  <div id="MenuContainer">
+    <div id="PrivateMenu" class="subMenu">
+      <div id="PrivateLabel"><p class=vertical-text>Accès réservé</p></div>
+      <ul>
+      <li><a target="_blank" href="http://git.project-tomorrow.fr">
+              <div class= "nav-icon" id="gitlab"></div>
+              <span>Gitlab</span>
+      </a></li>
+      <li><a target="_blank" href="https://project-tomorrow.slack.com">
+              <div class= "nav-icon" id="slack"></div>
+              <span>Slack</span>
+      </a></li>
+      <li><a target="_blank" href="https://trello.com/protouser">
+              <div class= "nav-icon" id="trello"></div>
+              <span>Trello</span>
+      </a></li>
+      <li><a target="_blank" href="https://projecttomorrow.sharepoint.com/Team1">
+              <div class= "nav-icon" id="sharepoint"></div>
+              <span>Site du Projet</span>
+      </a></li>
+      <li><a target="_blank" href="https://www.office.com/1/?auth=2">
+              <div class= "nav-icon" id="office"></div>
+              <span>Portail Office</span>
+      </a></li>
+    </ul>
+  </div>
+  <div id="PublicMenu" class="subMenu">
+    <div id="PublicLabel"><p class=vertical-text>Accès public</p></div>
+      <ul>
+        <li><a target="_blank" href="/people">
+          <div class= "nav-icon" id="Team"></div>
+          <span>Équipe</span>
+        </a></li>
+        <li><a target="_blank" href="/contact">
+          <div class= "nav-icon" id="Mail"></div>
+          <span>Contact</span>
+        </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+	<section>
+		<div id="Welcome">
+			<img src="ProToLogo.svg"></img>
+			<div>ProTo</div>
+		</div>
+
+		
+			
+				<div class="slide-content first" id="slide0">
+			
+					<span class="highlight">Promouvoir l'innovation et l'ouverture.</span>
+<div class="central-text">
+<p>
+	<b>ProTo</b> nous rassemble autour d'une même vision : nos cadres et entrepreneurs ont besoin d'être mieux formés à l'innovation et gagnent à acquérir au plus tôt les clefs pour dialoguer efficacement avec des collaborateurs d'horizons différents.
+</p>
+<p>
+	Les projets ProTo visent à répondre à une problématique industrielle avec une solution innovante. Ils sont accomplis par des équipes hétérogènes d'étudiants accompagnés - en plus de leurs professeurs - par des membres de l'association ProTo.
+</p>
+</div>
+<div class="kindOfTab">
+	<div class="column">
+		<img src="university.png"/>
+		<h2>Les Établissements Partenaires</h2>
+		<p></p>
+	</div>
+	<div class="column">
+		<img id='TADA' src="schoolBoy.png"/>
+		<h2>Les Étudiants</h2>
+		<p></p>
+	</div>
+	<div class="column">
+		<img src="ProToTeam.png"/>
+		<h2>Les ProTos Sapiens</h2>
+		<p></p>
+	</div>
+</div>
+<div class="central-text">
+	<p>
+		Grâce à leur encadrement par des professionnels travaillant en entreprise (ingénieurs, chefs de projet, entrepreneurs, etc.), les projets ProTo incarnent un bon moyen pour les étudiants de se sensibiliser aux problématiques réelles et concrètes de leur futur emploi. En plus d'offrir aux élèves une expérience pratique de la gestion de l'innovation, les projets ProTo sont également une excellente façon pour les entreprises de développer des solutions innovantes et détecter de futurs collaborateurs.
+	</p>
+</div>
+<script>
+function choose()
+{
+	document.getElementById('TADA').src = Math.random()>.5 ? 'schoolGirl.png' : 'schoolBoy.png';
+}
+onload=choose;
+</script>
+
+				</div>
+			
+		
+	</section>
+	<footer>
+  <div id="legal">
+    <p>Copyright (c) 2016-2018 Copyright ProTo All Rights Reserved.</p>
+  </div>
+</footer>
+
+	<script>
+	function backpo() {
+		document.body.style.backgroundPosition = ["50% "+ -document.body.scrollTop/2.1+"px"];
+	}
+	</script>
+</body>
+</html>
